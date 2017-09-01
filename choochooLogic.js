@@ -1,3 +1,4 @@
+// Initialize Firebase
 var config = {
   apiKey: "AIzaSyCALpRE4fSedxoyKjYs2mdUp1ZFz2WOi5A",
   authDomain: "realtime-database-bcd14.firebaseapp.com",
@@ -6,6 +7,7 @@ var config = {
   storageBucket: "realtime-database-bcd14.appspot.com",
   messagingSenderId: "619923435321"
 };
+
 
 firebase.initializeApp(config);
 
@@ -33,7 +35,7 @@ $("#submit").on("click", function() {
   var frequency = $("#frequency-input").val().trim();
 
 // Use Push (the object into an array) instead of Set (which overwrites).
-  database.ref("/cEmployee").push({
+  database.ref("/cTrain").push({
     TrainName : trainName, 
     Destination : destination, 
     FirstTrain : firstTrain, 
